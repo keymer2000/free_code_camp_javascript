@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    
+
+  <script>
+        
+    var frase = prompt('digite una frase para saber si es un palindrome, ejemplo: eye')
+
+    function palindrome(frase) {
+    frase = frase.toLowerCase().replace(/[\W_]/g, "");
+
+    for (var i = 0, len = frase.length - 1; i < len / 2; i++) {
+        if (frase[i] !== frase[len - i]) {
+        return (frase +' "no es un palindrome"');
+        }
+    }
+    return (frase+' "es un palindrome"');
+        }
+
+        alert(palindrome(frase));
+    </script>
+</body>
+</html>
